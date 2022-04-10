@@ -12,19 +12,28 @@ public class Exercise1 {
         System.out.println("Enter the number of the week day");
         int dayNum;
         String input;
-        boolean isDayOfWeek = true;
+        boolean isDayOfWeek;
         while (true)
         {
-            input = scanner.nextLine();
-            if (Integer.parseInt(input)>0&&Integer.parseInt(input)<8)
+            try
             {
-                dayNum = Integer.parseInt(input);
-                break;
+                dayNum = scanner.nextInt();
+                if (dayNum > 0 && dayNum < 8)
+                {
+                    isDayOfWeek = true;
+                    break;
+                }
+                else
+                {
+                    System.out.println("Please enter a number from 1 to 7");
+                }
             }
-            else
+            catch (Exception e)
             {
                 System.out.println("Please enter a number from 1 to 7");
+                scanner.nextLine();
             }
+
         }
         switch (dayNum)
         {
