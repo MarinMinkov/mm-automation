@@ -17,7 +17,4 @@ public class Exercise2 {
             System.out.println("You are NOT eligible to work.");
         }
     }
-
-
-
 }
